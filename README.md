@@ -16,7 +16,7 @@ If you are on a Mac, you'll want Homebrew. Guides for Linux and Windows are fort
 1. [Install Homebrew](https://github.com/mxcl/homebrew/wiki/installation)
 2. Install git: `brew install git`
 3. Install git-flow (if you want to be a contributor): `brew install git-flow`
-4. Clone this repository: `git clone git@github.com:munaf/agora.git`
+4. Clone this repository: `git clone git@github.com:wikimedia/agora.git`
 5. Install Node (which will include npm): `brew install node`
 6. Install recess and watchr: `npm install recess watchr -g`
 7. Make agora.css: `make`
