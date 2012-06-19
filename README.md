@@ -1,7 +1,7 @@
 Wikimedia Agora
 =================
 
-Agora is a design toolkit which aims to provide Wikimedia Foundation designers and developers with a consistent set of styles with which to create MediaWiki extensions and experimental tools. Community developers are also encouraged to make use of Agora where applicable. 
+Agora is a design framework (inspired by [Bootstrap](https://github.com/twitter/bootstrap/) and [Foundation](https://github.com/zurb/foundation)) which aims to provide Wikimedia Foundation designers and developers with a consistent set of styles for creating MediaWiki extensions and experimental tools. This is part of an ongoing initiative to improve MediaWiki's usability and consistency. Community developers are encouraged to make use of Agora where applicable. 
 
 Design Principles
 -----------------
@@ -19,8 +19,14 @@ If you are on a Mac, you'll want Homebrew. Guides for Linux and Windows are fort
 4. Clone this repository: `git clone git@github.com:wikimedia/agora.git`
 5. Install Node (which will include npm): `brew install node`
 6. Install recess and watchr: `npm install recess watchr -g`
-7. Make agora.css: `make`
-8. Make and watch LESS files: `make watch`
+
+Building
+--------
+
+You have two options: you can make agora.css once or build the LESS files automatically as they are edited/saved.
+
+* Make agora.css: `make`
+* Make and watch LESS files: `make watch`
 
 Contributing
 ------------
@@ -31,6 +37,7 @@ License
 -------
 
 Wikimedia Agora
+
 Copyright (C) 2012, Wikimedia Inc.
 
 This program is free software; you can redistribute it and/or
