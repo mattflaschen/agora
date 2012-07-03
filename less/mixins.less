@@ -28,7 +28,7 @@
 // Gradients (IE6+, Firefox 3.6+, Safari 4+, Chrome 2+)
 // ----------------------------------------------------------------------------
 .horizontal-gradient (@startColor: gray, @endColor: white) {
-	background-color: @startColor;
+	background-color: @endColor;
 	background-repeat: repeat-x;
 	background-image: -moz-linear-gradient(left, @startColor, @endColor); // Firefox 3.6+
 	background-image: -ms-linear-gradient(left, @startColor, @endColor);  // IE10
@@ -39,38 +39,12 @@
 	background-image: linear-gradient(left, @startColor, @endColor); // Standard
 }
 .vertical-gradient (@startColor: gray, @endColor: white) {
-	background-color: @startColor;
-	background-repeat: repeat-x;
-	background-image: -moz-linear-gradient(@startColor, @endColor); // Firefox 3.6+
-	background-image: -ms-linear-gradient(@startColor, @endColor);  // IE10
+	background-color: @endColor;
+	background-image: -moz-linear-gradient(top, @startColor, @endColor); // Firefox 3.6+
+	background-image: -ms-linear-gradient(top, @startColor, @endColor);  // IE10
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @startColor), color-stop(100%, @endColor)); // Safari 4+, Chrome 2+ 
-	background-image: -webkit-linear-gradient(@startColor, @endColor); // Safari 5.1+, Chrome 10+
+	background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
 	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE6 & IE7
 	-ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor); // IE8+
 	background-image: linear-gradient(@startColor, @endColor); // Standard
-}
-
-// ----------------------------------------------------------------------------
-// Buttons
-// ----------------------------------------------------------------------------
-.btn(@bgColor: gray, @borderColor: black 
-		@upGradientStart: gray, @upGradientEnd: white, 
-		@hoverGradientStart: gray, @hoverGradientEnd: white, 
-		@activeGradientStart: gray, @activeGradientEnd: white) {
-
-	display: inline-block;
-	background-color: @bgColor;
-	.vertical-gradient(@gradientStart, @gradientEnd);
-	.border-radius(3px);
-	padding: (@baseFontSize/2) (@baseFontSize * 1.5) (@baseFontSize/2);
-	font: bold @baseFontSize @baseFontFamily;
-	color: white;
-	text-align: center;
- 	text-shadow:  0 -1px 0 rgba(0, 0, 0, 0.25);
-	&:hover {
-		.vertical-gradient(@hoverGradientStart, @hoverGradientEnd);
-	}
-	&:active {
-		.vertical-gradient(@activeGradientStart, @activeGradientEnd);
-	}
 }
