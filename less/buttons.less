@@ -4,13 +4,29 @@ button.button {
 	padding: (@baseFontSize/2) (@baseFontSize * 1.5) (@baseFontSize/2);
 	font: bold @baseFontSize @baseFontFamily;
 	line-height: 1;
-	color: white;
 	text-align: center;
- 	text-shadow:  0 -1px 0 rgba(0, 0, 0, 0.25);
  	cursor: pointer;
+
+  //Gray by default:
+  color: @gray5;
+  text-shadow:  0 1px 1px rgba(255, 255, 255, 0.75);
+  border: 1px @gray3 solid;
+  .vertical-gradient(@gray2, #e6e6e6);
+
+   &:hover{
+       .vertical-gradient(@gray1, @gray2);
+       border-color:@gray3;
+    }
+    &:active{
+       .vertical-gradient(#d3d3d3, #d8d8d8);
+       border-color:@gray3;
+    }
+
+  //Other colors:
 
 	&.red {
 		border: 1px #ba0101 solid;
+		.text-with-shadow(white);
 		.vertical-gradient(#e42929, @redBase);
 		&:hover {
 			.vertical-gradient(#ef3838, #e82b2b);
@@ -21,6 +37,7 @@ button.button {
 	}
 	&.green {
 		border: 1px #0f9b3b solid;
+		.text-with-shadow(white);
 		.vertical-gradient(#00974b, @greenBase);
 		&:hover {
 			.vertical-gradient(#10a65b, #119750);
@@ -31,6 +48,7 @@ button.button {
 	}
 	&.blue {
 		border: 1px #33589f solid;
+		.text-with-shadow(white);
 		.vertical-gradient(#3670C8, @blueBase);
 		&:hover {
 			.vertical-gradient(#4c84da, #3f77d7);
