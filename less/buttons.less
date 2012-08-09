@@ -21,6 +21,12 @@ button.button {
        .vertical-gradient(#d3d3d3, #d8d8d8);
        border-color:@gray3;
     }
+    &:disabled, &:disabled.hover, &.disabled, &.disabled:hover {
+     cursor:default;
+     .vertical-gradient(@gray2,@gray2);
+      border-color:darken(@gray2,5%);
+      color: @gray4;
+    }
 
   //Other colors:
 
@@ -34,6 +40,14 @@ button.button {
 		&:active {
 			.vertical-gradient(#a70000, #a70000);
 		}
+		&:disabled, &:disabled.hover, &.disabled, &.disabled:hover{
+      @disabledColor: lighten(desaturate(#ef3838,10%),10%);
+      color:white;
+      cursor:default;
+      text-shadow:  none;
+     .vertical-gradient(@disabledColor,@disabledColor);
+      border-color: darken(@disabledColor,5%);
+    }
 	}
 	&.green {
 		border: 1px #0f9b3b solid;
@@ -45,6 +59,14 @@ button.button {
 		&:active {
 			.vertical-gradient(#007236, #007236);
 		}
+		&:disabled, &:disabled.hover, &.disabled, &.disabled:hover{
+      @disabledColor: lighten(desaturate(#10a65b,25%),5%);
+      color:white;
+      cursor:default;
+      text-shadow:  none;
+     .vertical-gradient(@disabledColor,@disabledColor);
+      border-color: darken(@disabledColor,5%);
+    }
 	}
 	&.blue {
 		border: 1px #33589f solid;
@@ -56,5 +78,13 @@ button.button {
 		&:active {
 			.vertical-gradient(#2d5ea9, #2a549c);
 		}
+		&:disabled, &:disabled.hover, &.disabled, &.disabled:hover{
+      @disabledColor: lighten(desaturate(#3f77d7,10%),10%);
+      color:white;
+      cursor:default;
+      text-shadow:  none;
+     .vertical-gradient(@disabledColor,@disabledColor);
+      border-color: darken(@disabledColor,5%);
+    }
 	}
 }
