@@ -1,64 +1,67 @@
 // ----------------------------------------------------------------------------
 // GRAYS: Use for chrome, content, UI elements
 // ----------------------------------------------------------------------------
-@gray5 = #000000;
-@gray4 = desaturate(@gray5, 10%);
-@gray3 = desaturate(@gray4, 10%);
-@gray2 = desaturate(@gray4, 10%);
-@gray1 = desaturate(@gray4, 10%);
-@gray0 = desaturate(@gray4, 10%);
+@gray5 : lighten(black, 14.5%);
+@gray4 : lighten(black, 46.6%);
+@gray3 : lighten(black, 78.8%);
+@gray2 : lighten(black, 94.1%);
+@gray1 : lighten(black, 97.2%);
+@gray0 : lighten(black, 100%);
 
 // Semantic Grays
-@chromeFillColor   = @gray3;
-@chromeTextColor   = @gray5;
-@chromeBorderColor = @gray4;
+@chromeFillColor   : @gray3;
+@chromeTextColor   : @gray5;
+@chromeBorderColor : @gray4;
 
-@disabledFillColor = @gray1;
-@disabledTextColor = @gray2;
+@disabledFillColor : @gray1;
+@disabledTextColor : @gray2;
 
 // ----------------------------------------------------------------------------
 // REDS: Use for errors, notifications, delete actions
 // ----------------------------------------------------------------------------
-@red5 = #FF0000;
-@red4 = desaturate(@red5, 10%);
-@red3 = desaturate(@red4, 10%);
-@red2 = desaturate(@red3, 10%);
-@red1 = desaturate(@red2, 10%);
-@red0 = desaturate(@red1, 10%);
+@redBase : #CC0000;
+@red5 : #FF0000;
+@red4 : desaturate(@red5, 10%);
+@red3 : desaturate(@red4, 10%);
+@red2 : desaturate(@red3, 10%);
+@red1 : desaturate(@red2, 10%);
+@red0 : desaturate(@red1, 10%);
 
 // Semantic Reds
-@warningColor     = @red2;
-@warningTextColor = @red4;
+@warningColor     : @red2;
+@warningTextColor : @red4;
 
-@failureColor     = @red3;
-@failureTextColor = @red5;
+@failureColor     : @red3;
+@failureTextColor : @red5;
 
 // ----------------------------------------------------------------------------
 // GREENS: Use for positive feedback, confirmation, positive emotion
 // ----------------------------------------------------------------------------
-@green5 = #00FF00;
-@green4 = desaturate(@green5, 10%);
-@green3 = desaturate(@green4, 10%);
-@green2 = desaturate(@green3, 10%);
-@green1 = desaturate(@green2, 10%);
-@green0 = desaturate(@green1, 10%);
+@greenBase : #008740;
+@green5 : #00FF00;
+@green4 : desaturate(@green5, 10%);
+@green3 : desaturate(@green4, 10%);
+@green2 : desaturate(@green3, 10%);
+@green1 : desaturate(@green2, 10%);
+@green0 : desaturate(@green1, 10%);
 
 // Semantic Greens
-@successColor = @green3;
+@successColor : @green3;
 
 // ----------------------------------------------------------------------------
 // BLUES: Use for links, emphasis, selections, information, submit/terminal 
 //        actions, information design
 // ----------------------------------------------------------------------------
-@blue5 = #0000FF;
-@blue4 = desaturate(@blue5, 10%);
-@blue3 = desaturate(@blue4, 10%);
-@blue2 = desaturate(@blue3, 10%);
-@blue1 = desaturate(@blue2, 10%);
-@blue0 = desaturate(@blue1, 10%);
+@blueBase : #3366BB;
+@blue5 : #0000FF;
+@blue4 : desaturate(@blue5, 10%);
+@blue3 : desaturate(@blue4, 10%);
+@blue2 : desaturate(@blue3, 10%);
+@blue1 : desaturate(@blue2, 10%);
+@blue0 : desaturate(@blue1, 10%);
 
 // Semantic Blues
-@infoColor = @blue3;
+@infoColor : @blue3;
 
 
 
