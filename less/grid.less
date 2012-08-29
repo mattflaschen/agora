@@ -1,0 +1,47 @@
+// ----------------------------------------------------------------------------
+// HARD-CODED SETTINGS
+// ----------------------------------------------------------------------------
+@contentWidth   : 960px;
+@numColumns     : 12;
+@columnGap      : 20px;
+
+// ----------------------------------------------------------------------------
+// CALCULATED SETTINGS
+// ----------------------------------------------------------------------------
+@columnWidth    : (@contentWidth / @numColumns) - @columnGap;
+
+.block-width(@numCols: 1) {
+	width: ( @numCols * @columnWidth ) + ( (@numCols - 1) * @columnGap );
+}
+
+// ----------------------------------------------------------------------------
+// STYLES
+// ----------------------------------------------------------------------------
+.web-grid {
+	.row {
+		width: @contentWidth;
+		margin-bottom: @columnGap / 2;
+		.center-block();
+		.clearfix();
+
+		.column, 
+		.columns {
+			float: left;
+			margin-right: @columnGap;
+
+			&.one    { .block-width(1);  }
+			&.two    { .block-width(2);  }
+			&.three  { .block-width(3);  }
+			&.four   { .block-width(4);  }
+			&.five   { .block-width(5);  }
+			&.six    { .block-width(6);  }
+			&.seven  { .block-width(7);  }
+			&.eight  { .block-width(8);  }
+			&.nine   { .block-width(9);  }
+			&.ten    { .block-width(10); }
+			&.eleven { .block-width(11); }
+			&.twelve { .block-width(12); }
+			&.end    { margin-right: 0;  }
+		}
+	}
+}

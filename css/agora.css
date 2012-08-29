@@ -179,6 +179,97 @@ h6 {
   line-height: 0.8536499999999999em;
 }
 
+.web-grid .row {
+  display: block;
+  width: 960px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  *zoom: 1;
+}
+
+.web-grid .row:before,
+.web-grid .row:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.web-grid .row:after {
+  clear: both;
+}
+
+.web-grid .row .column,
+.web-grid .row .columns {
+  float: left;
+  margin-right: 20px;
+}
+
+.web-grid .row .column.one,
+.web-grid .row .columns.one {
+  width: 60px;
+}
+
+.web-grid .row .column.two,
+.web-grid .row .columns.two {
+  width: 140px;
+}
+
+.web-grid .row .column.three,
+.web-grid .row .columns.three {
+  width: 220px;
+}
+
+.web-grid .row .column.four,
+.web-grid .row .columns.four {
+  width: 300px;
+}
+
+.web-grid .row .column.five,
+.web-grid .row .columns.five {
+  width: 380px;
+}
+
+.web-grid .row .column.six,
+.web-grid .row .columns.six {
+  width: 460px;
+}
+
+.web-grid .row .column.seven,
+.web-grid .row .columns.seven {
+  width: 540px;
+}
+
+.web-grid .row .column.eight,
+.web-grid .row .columns.eight {
+  width: 620px;
+}
+
+.web-grid .row .column.nine,
+.web-grid .row .columns.nine {
+  width: 700px;
+}
+
+.web-grid .row .column.ten,
+.web-grid .row .columns.ten {
+  width: 780px;
+}
+
+.web-grid .row .column.eleven,
+.web-grid .row .columns.eleven {
+  width: 860px;
+}
+
+.web-grid .row .column.twelve,
+.web-grid .row .columns.twelve {
+  width: 940px;
+}
+
+.web-grid .row .column.end,
+.web-grid .row .columns.end {
+  margin-right: 0;
+}
+
 button.button {
   display: inline-block;
   padding: 0.4065em 1.2195em 0.4065em;

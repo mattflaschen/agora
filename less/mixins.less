@@ -30,6 +30,28 @@
 }
 
 // ----------------------------------------------------------------------------
+// Positioning Elements
+// ----------------------------------------------------------------------------
+.center-block() {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// ----------------------------------------------------------------------------
 // Gradients (IE6+, Firefox 3.6+, Safari 4+, Chrome 2+)
 // ----------------------------------------------------------------------------
 .horizontal-gradient (@startColor: gray, @endColor: white) {
